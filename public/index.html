@@ -1,6 +1,7 @@
 <html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js"></script>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
@@ -25,6 +26,11 @@
       <li ng-repeat="book in books">
         <h4>{{ book.title }}</h4>
         <p>{{ book.author }}</p>
+      </li>
+    </ul>
+    <ul>
+      <li ng-repeat="movie in movies">
+         <h4>{{ movie.title }}</h4>
       </li>
     </ul>
     <input
@@ -52,6 +58,7 @@
   <script type="text/javascript" src="/js/constants.js"></script>
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
+  <script type="text/javascript" src="/js/providers.js"></script>
   <script type="text/javascript" src="/js/myController.controller.js"></script>
 </body>
 </html>

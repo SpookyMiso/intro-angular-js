@@ -6,6 +6,17 @@ var path = require('path');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/api', function (req, res, next) {
+  res.json([
+    { title: '007: Spectre' },
+    { title: 'Godzilla' },
+    { title: 'Pulp fiction' }
+    ]);
+
+});
+
+
 var server = app.listen(8080, function() {
   console.log('Server running');
 });
+
