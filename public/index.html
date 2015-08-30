@@ -22,14 +22,20 @@
     <ul>
       <li ng-repeat ="character in characters">{{ character }}</li>
     </ul>
+    <input
+      ng-model="searchBookTitle"
+      type="text"
+      name="name"
+      value="">
     <ul>
-      <li ng-repeat="book in books">
+      <li ng-repeat="book in books | filter: { title: searchBookTitle }">
         <h4>{{ book.title }}</h4>
         <p>{{ book.author }}</p>
       </li>
     </ul>
+    <h2>Movies from 2015</h2>
     <ul>
-      <li ng-repeat="movie in movies">
+      <li ng-repeat="movie in movies | beforeYearFilter: 2000">
          <h4>{{ movie.title }}</h4>
       </li>
     </ul>
@@ -59,6 +65,7 @@
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
+  <script type="text/javascript" src="/js/filters.js"></script>
   <script type="text/javascript" src="/js/myController.controller.js"></script>
 </body>
 </html>
