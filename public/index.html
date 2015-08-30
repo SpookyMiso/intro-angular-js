@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
-<body ng-app>
-<h1>{{"Katamari" + " " + "Damacy"}}</h1>
-<div>{{ 2 + 3 }}</div>
+<body ng-app="myApp">
+  <div ng-controller="myController">
+    <h1>{{"Katamari" + " " + "Damacy"}}</h1>
+    <div>{{ 2 + 3 }}</div>
+    <input
+      ng-model="test"
+      type="text"
+      name="name"
+      value="">
+    <p>{{test}}</p>
+  </div>
+  <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
