@@ -35,8 +35,9 @@
     </ul>
     <h2>Movies from 2015</h2>
     <ul>
-      <li ng-repeat="movie in movies | beforeYearFilter: 2000">
+      <li ng-repeat="movie in movies | beforeYearFilter: 2000 | orderBy: '-title'">
          <h4>{{ movie.title }}</h4>
+         <p>{{ movie.year }}</p>
       </li>
     </ul>
     <input
